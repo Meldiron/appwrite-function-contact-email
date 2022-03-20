@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "mail:local": "maizzle build",
+    "mail:build": "maizzle build production",
+    "mail:serve": "maizzle serve",
+    "appwrite:build": "cd appwrite-function && tar --exclude node_modules --exclude code.tar.gz -czf code.tar.gz . && mv code.tar.gz ../appwrite-function.tar.gz && cd ..",
+    "build": "npm run mail:build && npm run appwrite:build"
+  },
+  "dependencies": {
+    "@maizzle/framework": "^3.0.0"
+  }
+}
